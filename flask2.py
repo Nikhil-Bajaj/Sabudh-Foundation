@@ -28,6 +28,7 @@ def get_task(task_id):
 def get_tasks():
     return jsonify({'tasks': tasks})
 
+
 @app.route('/tasks', methods=['POST'])
 def create_task():
     if not request.json or not 'title' in request.json:

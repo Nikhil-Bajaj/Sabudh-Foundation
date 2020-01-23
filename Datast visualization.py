@@ -38,6 +38,7 @@ def KNN(X, Y, queryPoint, k=5):
 
     new_vals = np.unique(vals[:, 1], return_counts=True)
 
+
     # print(new_vals)
 
     index = new_vals[1].argmax()
