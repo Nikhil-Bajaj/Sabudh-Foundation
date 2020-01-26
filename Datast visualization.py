@@ -9,12 +9,10 @@ X = np.random.rand(200,2)
 
 X[0:100,:] = X[0:100,:]*4 + 10
 X[100:,:] = X[100:,:]*4 + 13
-Y = np.ones(200)
-Y[:100] = 0
 
 
-plt.scatter(X[0:100,0],X[0:100,1],color="red")
-plt.scatter(X[100:,0],X[100:,1],color="blue")
+plt.scatter(X[0:100,0],X[0:100,1])
+plt.scatter(X[100:,0],X[100:,1])
 plt.show()
 
 def dist(x1,x2):
