@@ -1,3 +1,4 @@
+'''
 import flask
 from flask import request, jsonify
 
@@ -26,10 +27,12 @@ books = [
 
 @app.route('/', methods=['GET'])
 def home():
-    return '''<h1>Distant Reading Archive</h1>
+    return '''
+''''
+<h1>Distant Reading Archive</h1>
 <p>A prototype API for distant reading of science fiction novels.</p>'''
 
-
+'''
 @app.route('/api/v1/resources/books/all', methods=['GET'])
 def api_all():
     return jsonify(books)
@@ -60,3 +63,22 @@ def api_id():
     return jsonify(results)
 
 app.run()
+'''
+from flask import Flask, jsonify
+
+app = Flask(__name__)
+
+
+@app.route('/')
+def hello():
+    lst = [
+        {'Samiksha': ['Jain', 'Here Glamour'],
+         'Jigarjeet': ['Kaur', 'Jigar'],
+         'Sourav': ['Arora', 'Goda'],
+         'Sudhakar': ['Kashyap', 'Sudha']}
+    ]
+    return jsonify(lst)
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
