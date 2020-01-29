@@ -3,8 +3,6 @@ iris=datasets.load_iris()
 x=iris.data
 y=iris.target
 print(x,y)
-from sklearn.model_selection import train_test_split
-
 from sklearn import tree
 classifier=tree.DecisionTreeClassifier()
 classifier.fit(x,y)
@@ -15,5 +13,5 @@ for x in range(0,4):
 b=[a]
 print(b)
 predictions=classifier.predict(b)
-from sklearn.metrics import accuracy_score
+
 print(predictions)
