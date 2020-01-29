@@ -17,7 +17,6 @@ def signup():
 
     users = mongo.db.users
 
-
     users.insert(user)
 
     return jsonify({'status': 200, "response_message": "user " + request.json['username'] + " sign up successfully"})
