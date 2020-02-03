@@ -4,7 +4,7 @@ import os
 pd.set_option('display.width', 500)
 pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 30)
-data=pd.read_csv("C:/Users/AKHIL/PycharmProjects/Ssbudh/kidney-disease-dataset/kidney_disease.csv",index_col = False)
+data=pd.read_csv("C:/Users/AKHIL/PycharmProjects/Ssbudh/Kidney Disease/kidney-disease-dataset/kidney_disease.csv",index_col = False)
 '''
 col= ['age', 'bp', 'bgr', 'bu', 'sc', 'sod', 'pot', 'hemo', 'pcv', 'wc', 'rc']
 for c in col:
@@ -42,5 +42,5 @@ try:
 except:
     pass
 
-data.to_csv("C:/Users/AKHIL/PycharmProjects/Ssbudh/kidney-disease-dataset/processed.csv", sep=',', index=False)
+data.to_csv("C:/Users/AKHIL/PycharmProjects/Ssbudh/Kidney Disease/kidney-disease-dataset/processed.csv", sep=',', index=False)
 print("Exported")
