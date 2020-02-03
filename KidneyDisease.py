@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-
+import os
 pd.set_option('display.width', 500)
 pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 30)
@@ -37,3 +37,10 @@ data.fillna(round(data.mean(),2), inplace=True)
 #data.fillna(method='ffill')
 print(data.head(n=10))
 print(data['Red Blood Cells'].mean())
+try:
+    os.remove('processed.csv')
+except:
+    pass
+
+data.to_csv("C:/Users/AKHIL/PycharmProjects/Ssbudh/kidney-disease-dataset/processed.csv", sep=',', index=False)
+print("Exported")
